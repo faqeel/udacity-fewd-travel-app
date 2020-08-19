@@ -3,7 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Travel App</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">Travel Planner</a>
+        <nav class="menu">
+          <a href="#" class="menu__item active">Home</a>
+          <a href="#" class="menu__item">Link</a>
+          <a href="#" class="menu__item">Link</a>
+          <a href="#" class="menu__item">Link</a>
+        </nav>
+        <button class="theme active">
+          <svg class="theme__icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M10 2c-1.82 0-3.53.5-5 1.35C7.99 5.08 10 8.3 10 12s-2.01 6.92-5 8.65C6.47 21.5 8.18 22 10 22c5.52 0 10-4.48 10-10S15.52 2 10 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <section class="left">
+          <form class="form">
+            <div class="form__input">
+              <label for="destination">Destination</label>
+              <input type="text" name="destination" id="destination" placeholder="Enter your destination" />
+            </div>
+            <div class="form__row">
+              <div class="form__input">
+                <label for="start_date">Start Date</label>
+                <input type="date" name="start_date" id="start_date" />
+              </div>
+              <div class="form__input">
+                <label for="end_date">End Date</label>
+                <input type="date" name="end_date" id="end_date" />
+              </div>
+            </div>
+            <button class="btn form__submit" id="search-btn">Search</button>
+          </form>
+        </section>
+        <section class="right">
+          <header id="dest_picture" class="picture">
+            <button class="btn btn--sm">Save trip</button>
+            <div class="info">
+              <h1 id="dest_name"></h1>
+              <ul class="list">
+                <li class="list__item" id="dest_region"><span class="item__title">Region: </span></li>
+                <li class="list__item" id="dest_timezone"><span class="item__title">Timezone: </span></li>
+                <li class="list__item" id="dest_currency"><span class="item__title">Currency: </span></li>
+                <li class="list__item" id="dest_language"><span class="item__title">Language: </span></li>
+              </ul>
+            </div>
+          </header>
+          <section class="general">
+            <article class="box">
+              <h3>Trip Duration</h3>
+              <p id="dest_dates"></p>
+              <span id="dest_length"></span>
+              <p>days</p>
+            </article>
+            <article class="box">
+              <h3>Current Weather</h3>
+              <p id="cur_weather_date"></p>
+              <span class="temp" id="cur_weather_temp"></span>
+              <ul class="list">
+                <li class="list__item" id="cur_weather_feels"><span class="item__title">Feels Like: </span></li>
+                <li class="list__item" id="cur_weather_sunset"><span class="item__title">Sunset: </span></li>
+              </ul>
+            </article>
+          </section>
+          <section class="forecast">
+            <article class="box">
+              <p></p>
+              <div class="weather__icon">
+                <img src="" alt="" />
+              </div>
+              <span class="temp"></span>
+            </article>
+          </section>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>

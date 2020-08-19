@@ -1,0 +1,46 @@
+.form {
+  &__row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 992px) {
+    &__row {
+      display: flex;
+      flex-direction: row;
+
+      & > * {
+        margin-right: 1rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    label {
+      color: #c5c6c7;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      padding: 1rem;
+      border-radius: 4px;
+      background: #212127;
+      border: 1px solid #26272d;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}

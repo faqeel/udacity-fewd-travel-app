@@ -1,0 +1,35 @@
+.picture {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(0px 4px 8px #141419);
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: rgba(20, 20, 25, 0.7);
+  }
+
+  .btn {
+    position: absolute;
+    right: 0;
+    margin: 1rem;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 1rem 1rem;
+
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #1b1c21;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #f8f8f9;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: 0;
+  -webkit-appearance: none;
+  color: #f8f8f9;
+}
+
+ul {
+  list-style-type: none;
+}

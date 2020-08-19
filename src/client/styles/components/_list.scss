@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+
+  &__item {
+    display: inline;
+
+    &:after {
+      content: "•";
+      margin: 0 0.25rem;
+      color: #c5c6c7;
+    }
+
+    &:last-child:after {
+      content: "";
+    }
+  }
+
+  .item__title {
+    color: #c5c6c7;
+  }
+}
