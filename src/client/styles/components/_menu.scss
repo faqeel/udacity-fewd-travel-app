@@ -1,0 +1,23 @@
+.menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: block;
+
+    &__item {
+      opacity: 0.5;
+      margin: 0 0.5rem;
+      transition: opacity 200ms;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &--active {
+        opacity: 1;
+      }
+    }
+  }
+}

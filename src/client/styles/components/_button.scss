@@ -4,7 +4,20 @@
   border-radius: 4px;
   color: #f8f8f9;
 
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+
+    & > svg {
+      vertical-align: bottom;
+    }
+  }
+
   &--sm {
     padding: 0.5rem 1rem;
+  }
+
+  &--hide {
+    display: none;
   }
 }

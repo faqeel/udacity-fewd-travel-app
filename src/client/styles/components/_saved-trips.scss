@@ -1,0 +1,60 @@
+.saved-trips {
+  &__title {
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #c5c6c7;
+    font-size: 0.875rem;
+  }
+}
+
+.trips-list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0.25rem 0;
+    color: #c5c6c7;
+    padding: 0.825rem;
+    border-radius: 4px;
+    transition: color 200ms;
+
+    &:hover,
+    &--active {
+      color: #f8f8f9;
+    }
+
+    &--active {
+      background-color: #1d1d23;
+    }
+
+    .delete-btn {
+      color: #f8f8f9;
+      background-color: transparent;
+    }
+
+    @media (min-width: 992px) {
+      .delete-btn {
+        display: none;
+        width: auto;
+        height: auto;
+      }
+
+      &:hover .delete-btn {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    &__item {
+      flex-direction: row;
+    }
+  }
+}

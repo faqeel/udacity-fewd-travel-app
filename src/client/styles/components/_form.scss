@@ -1,25 +1,5 @@
 .form {
-  &__row {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (min-width: 992px) {
-    &__row {
-      display: flex;
-      flex-direction: row;
-
-      & > * {
-        margin-right: 1rem;
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-
-  &__input {
+  &__input-group {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -36,6 +16,26 @@
       border-radius: 4px;
       background: #212127;
       border: 1px solid #26272d;
+    }
+
+    &--row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: 992px) {
+      &--row {
+        display: flex;
+        flex-direction: row;
+
+        & > * {
+          margin-right: 1rem;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
     }
   }
 
