@@ -56,10 +56,67 @@ const handleSubmit = (event) => {
 		});
 };
 
+const handleSaveTrip = () => {
+	const savedTripsMsg = document.querySelector('.saved-trips p');
+	if (savedTripsMsg) {
+		savedTripsMsg.remove();
+	}
+
+	trips.push(new Trip(currentTrip.data, trips.length, createTripItem));
+
+	updateLocalStorage();
+
+	document.getElementById('save_trip').style.display = 'none';
+};
+
+const createTripItem = (id, name, active = false) => {
+	const li = document.createElement('li');
+	const a = document.createElement('a');
+	const button = document.createElement('button');
+
+	if (active) {
+		li.className = 'trips-list__item trips-list__item--active';
+	} else {
+		li.className = 'trips-list__item';
+	}
+	li.setAttribute('data-id', id);
+	a.setAttribute('href', '#result');
+	button.className = 'btn__icon delete-btn';
+
+	button.innerHTML = 'Delete';
+	a.innerHTML = name;
+
+	li.append(a);
+	li.append(button);
+
+	button.addEventListener('click', handleDeleteTrip);
+	a.addEventListener('click', handleDisplayTrip);
+
+	document.querySelector('.trips-list').append(li);
+
+	return li;
+};
+
 const removeActiveItem = () => {
 	document
 		.querySelectorAll('.trips-list__item--active')
 		.forEach((elm) => elm.classList.remove('trips-list__item--active'));
+};
+
+const displayTrip = (id) => {
+	result.classList.add('result--hide');
+	trips[id].element.classList.add('trips-list__item--active');
+	updateUI(trips[id]);
+};
+
+const handleDisplayTrip = (event) => {
+	displayTrip(event.target.parentElement.getAttribute('data-id'));
+};
+
+const updateLocalStorage = () => {
+	const data = [];
+	trips.forEach((trip) => data.push(trip.data));
+	localStorage.setItem('trips', JSON.stringify(data));
 };
 
 const updateUI = ({ id, data }) => {
@@ -155,5 +212,17 @@ const updateUI = ({ id, data }) => {
 		trips[id].element.classList.add('trips-list__item--active');
 	}
 };
+
+(() => {
+	if (!trips.length) {
+		return;
+	}
+	const savedTripsMsg = document.querySelector('.saved-trips p');
+	if (savedTripsMsg) {
+		savedTripsMsg.remove();
+	}
+	trips = trips.map((trip, index) => new Trip(trip, index, createTripItem));
+	displayTrip(trips[0].id);
+})();
 
 export { handleSubmit, handleSaveTrip };

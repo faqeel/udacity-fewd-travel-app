@@ -4,6 +4,8 @@ import './styles/style.scss';
 
 document.getElementById('search_btn').addEventListener('click', handleSubmit);
 
+document.getElementById('save_trip').addEventListener('click', handleSaveTrip);
+
 // Dark/Light Mode Switch
 document.querySelector('.theme-switch').addEventListener('click', () => {
 	document.querySelector('.theme-switch__icon').classList.toggle('theme-switch__icon--active');
