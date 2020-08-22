@@ -113,6 +113,36 @@ const handleDisplayTrip = (event) => {
 	displayTrip(event.target.parentElement.getAttribute('data-id'));
 };
 
+const handleDeleteTrip = (event) => {
+	const id = parseInt(event.target.parentElement.getAttribute('data-id'));
+	const elm = trips[id].element;
+
+	// Update items ID and index
+	for (let i = id; i < trips.length - 1; i++) {
+		trips[i + 1].id = i;
+		trips[i + 1].element.setAttribute('data-id', i);
+		trips[i] = trips[i + 1];
+	}
+
+	// Remove the last item because it will be duplicate
+	trips.pop();
+
+	// Remove the targeted item from the UI
+	elm.remove();
+
+	updateLocalStorage();
+
+	if (elm.classList.contains('trips-list__item--active')) {
+		result.classList.add('result--hide');
+	}
+
+	if (!trips.length) {
+		const p = document.createElement('p');
+		p.innerHTML = 'There are no saved trips';
+		document.querySelector('.saved-trips').append(p);
+	}
+};
+
 const updateLocalStorage = () => {
 	const data = [];
 	trips.forEach((trip) => data.push(trip.data));
