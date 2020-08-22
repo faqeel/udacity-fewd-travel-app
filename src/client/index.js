@@ -1,4 +1,8 @@
+import { handleSubmit, handleSaveTrip } from './js/app';
+
 import './styles/style.scss';
+
+document.getElementById('search_btn').addEventListener('click', handleSubmit);
 
 // Dark/Light Mode Switch
 document.querySelector('.theme-switch').addEventListener('click', () => {
