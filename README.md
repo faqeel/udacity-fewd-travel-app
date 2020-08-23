@@ -1,3 +1,5 @@
+![](/screenshots/main.png)
+
 # Travel App Project
 
 This project is for Udacity's [Front End Web Developer Nanodegree Program](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011). It provides information about the trip the user wants to visit and helps them in planning their trip.
@@ -39,6 +41,37 @@ After that,
 ```
 npm run start
 ```
+
+## Technologies
+
+| Tech                                    | Description                                           |
+| --------------------------------------- | ----------------------------------------------------- |
+| [Node.js](https://nodejs.org/en/)       | JavaScript runtime for the backend                    |
+| [Express](https://expressjs.com/)       | Server framework                                      |
+| [Axios](https://github.com/axios/axios) | Promise based HTTP client for the browser and node.js |
+| [Webpack](https://webpack.js.org/)      | Asset bundler                                         |
+| [Sass](https://sass-lang.com/)          | Style preprocessor                                    |
+| [Jest](https://jestjs.io/)              | Unit testing framework                                |
+
+## Screenshots
+
+### Search for a destination
+
+Users can search for any destination in the world to get some information that will help them in planning their trip
+
+![](/screenshots/search.gif)
+
+### Save trip feature
+
+Users can save the trip information on the local storage so that when they revisit the page, their information is still there
+
+![](/screenshots/save.gif)
+
+### Delete trip feature
+
+Users can delete the trip information from the local storage
+
+![](/screenshots/delete.gif)
 
 ## License
 
