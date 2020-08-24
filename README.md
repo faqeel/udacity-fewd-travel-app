@@ -18,6 +18,20 @@ To setup local development environment, clone this repo on your machine, navigat
 npm install
 ```
 
+## Environment Variables
+
+```
+PORT = the http port of the production mode to listen on. (Default: 3000)
+
+GOENAMES_USERNAME = the username for Geonames account used to integrate with the Geonames API
+
+WEATHERBIT_API_KEY = an API KEY used to integrate with the Weatherbit API
+
+PIXABAY_API_KEY = an API KEY used to integrate with the Pixabay API
+```
+
+There are example environment variables in .env.example that you can copy into .env.
+
 ## Running the project
 
 ### Development mode
