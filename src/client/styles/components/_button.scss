@@ -1,23 +1,28 @@
 .btn {
-  background-color: #1484ff;
-  padding: 1rem;
-  border-radius: 4px;
-  color: #f8f8f9;
+	background-color: #1484ff;
+	padding: 1rem;
+	border-radius: 4px;
+	color: #f8f8f9;
+	box-sizing: border-box;
 
-  &__icon {
-    width: 2rem;
-    height: 2rem;
+	&:hover {
+		background-color: lighten(#1484ff, 5%);
+	}
 
-    & > svg {
-      vertical-align: bottom;
-    }
-  }
+	&__icon {
+		width: 2rem;
+		height: 2rem;
 
-  &--sm {
-    padding: 0.5rem 1rem;
-  }
+		& > svg {
+			vertical-align: bottom;
+		}
+	}
 
-  &--hide {
-    display: none;
-  }
+	&--sm {
+		padding: 0.5rem 1rem;
+	}
+
+	&--hide {
+		display: none;
+	}
 }
