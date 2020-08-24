@@ -10,15 +10,7 @@ This project is for Udacity's [Front End Web Developer Nanodegree Program](https
 
 In this project we are using Node development environment. Node.js and the Node Package Manager (NPM) should be installed on the local machine.
 
-### Installing
-
-To setup local development environment, clone this repo on your machine, navigate to its location in the terminal and run the command:
-
-```
-npm install
-```
-
-## Environment Variables
+### Environment Variables
 
 ```
 PORT = the http port of the production mode to listen on. (Default: 3000)
@@ -31,6 +23,14 @@ PIXABAY_API_KEY = an API KEY used to integrate with the Pixabay API
 ```
 
 There are example environment variables in .env.example that you can copy into .env.
+
+### Installing
+
+To setup local development environment, clone this repo on your machine, navigate to its location in the terminal and run the command:
+
+```
+npm install
+```
 
 ## Running the project
 
