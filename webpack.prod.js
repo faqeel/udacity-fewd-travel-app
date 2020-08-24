@@ -17,7 +17,6 @@ module.exports = merge(common, {
 	plugins: [
 		new MiniCssExtractPlugin({ filename: '[name].css' }),
 		new CleanWebpackPlugin({
-			dry: true,
 			verbose: true,
 			cleanStaleWebpackAssets: true,
 			protectWebpackAssets: false,
